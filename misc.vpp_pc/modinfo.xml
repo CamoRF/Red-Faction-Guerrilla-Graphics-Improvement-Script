@@ -1,0 +1,240 @@
+<Mod Name="GFX Improvement v1.03 Alpha 12-9-2022 Build 224">
+	  <Author>Camo</Author>
+	  <Description>Placeholder</Description>
+	  <Changes>
+		<Replace File="data/misc.vpp/default.dtodx" NewFile="misc/dtodx/default.dtodx" />
+		<Replace File="data/misc.vpp/terr01_badlands.dtodx" NewFile="misc/dtodx/terr01_badlands.dtodx" />
+		<Replace File="data/misc.vpp/terr01_default.dtodx" NewFile="misc/dtodx/terr01_default.dtodx" />
+		<Replace File="data/misc.vpp/terr01_dust.dtodx" NewFile="misc/dtodx/terr01_dust.dtodx" />
+		<Replace File="data/misc.vpp/terr01_end_game.dtodx" NewFile="misc/dtodx/terr01_end_game.dtodx" />
+		<Replace File="data/misc.vpp/terr01_eos.dtodx" NewFile="misc/dtodx/terr01_eos.dtodx" />
+		<Replace File="data/misc.vpp/terr01_manufacturing.dtodx" NewFile="misc/dtodx/terr01_manufacturing.dtodx" />
+		<Replace File="data/misc.vpp/terr01_oasis.dtodx" NewFile="misc/dtodx/terr01_oasis.dtodx" />
+		<Replace File="data/misc.vpp/terr01_parker.dtodx" NewFile="misc/dtodx/terr01_parker.dtodx" />
+		<Replace File="data/misc.vpp/terr01_tutorial.dtodx" NewFile="misc/dtodx/terr01_tutorial.dtodx" />
+
+		<Edit File="data/misc.vpp/camera.xtbl" LIST_ACTION="COMBINE_BY_FIELD:Name,_Editor\Category">
+			<camera_view>
+				<Name>normal</Name>
+				<change_view_time>200</change_view_time>
+				<distance>normal</distance>
+				<near_dof>
+					<use_dof>True</use_dof>
+					<use_weapon_fov>False</use_weapon_fov>
+					<focal_distance_min>0.0</focal_distance_min>
+					<focal_range_near>0.0</focal_range_near>
+					<focused_distance_normal>150.0</focused_distance_normal>
+				</near_dof>
+				<_Editor>
+					<Category>Entries</Category>
+				</_Editor>
+				<far_dof>
+					<weapon_zoom_override>True<fov_max>1.0</fov_max>
+					</weapon_zoom_override>
+					<override_weapon_max_range>
+						<focal_distance_max>0.0</focal_distance_max>
+					</override_weapon_max_range>
+					<focused_distance_zoom>150.0</focused_distance_zoom>
+					<focal_range_far>150.0</focal_range_far>
+					<target_focus_speed>175</target_focus_speed>
+					<terrain_focus_speed>175</terrain_focus_speed>
+					<focused_dist_target_multiplier>1.0</focused_dist_target_multiplier>
+				</far_dof>
+			</camera_view>
+			
+			<camera_view>
+				<Name>fine_aim</Name>
+				<change_view_time>150</change_view_time>
+				<distance>close</distance>
+				<near_dof>
+					<use_dof>True</use_dof>
+					<use_weapon_fov>True</use_weapon_fov>
+					<focal_distance_min>0.0</focal_distance_min>
+					<focal_range_near>0.0</focal_range_near>
+					<focused_distance_normal>3.0</focused_distance_normal>
+				</near_dof>
+				<far_dof>
+					<focused_distance_zoom>20.0</focused_distance_zoom>
+					<focal_range_far>250.0</focal_range_far>
+					<target_focus_speed>175</target_focus_speed>
+					<terrain_focus_speed>175</terrain_focus_speed>
+					<override_weapon_max_range>
+						<focal_distance_max>250.0</focal_distance_max>
+					</override_weapon_max_range>
+					<fov_zoom>
+						<fov_zoom_percent>1.005</fov_zoom_percent>
+					</fov_zoom>
+					<focused_dist_target_multiplier>1.0</focused_dist_target_multiplier>
+				</far_dof>
+				<_Editor>
+					<Category>Entries</Category>
+				</_Editor>
+			</camera_view>
+		</Edit>
+
+		<Edit File="data/misc.vpp/vfx.xtbl" LIST_ACTION="COMBINE_BY_FIELD:Name,_Editor\Name">
+			
+			<Effect>
+				<Name>env_dust_camera_a</Name>
+				<VFX>
+					<Filename>env_dust_camera_a.effectx</Filename>
+				</VFX>
+				<_Editor>
+					<Category>Entries:Environment:Exterior:Camera Effects</Category>
+				</_Editor>
+				<Radius>20</Radius>
+				<Streaming_Category>Preload</Streaming_Category>
+				<Singleplayer>False</Singleplayer>
+				<Multiplayer>False</Multiplayer>
+			</Effect>
+			
+			<Effect>
+				<Name>env_dust_rolling_a</Name>
+				<VFX>
+					<Filename>dust_rolling_a.EFFECTX</Filename>
+				</VFX>
+				<Radius>5</Radius>
+				<_Editor>
+					<Category>Entries:Environment:Exterior:Dust</Category>
+				</_Editor>
+				<Streaming_Category>Environmental</Streaming_Category>
+				<Singleplayer>False</Singleplayer>
+				<Multiplayer>False</Multiplayer>
+			</Effect>
+			
+			<Effect>
+				<Name>env_dust_gust_a</Name>
+				<VFX>
+					<Filename>env_gust_a.effectx</Filename>
+				</VFX>
+				<Radius>10</Radius>
+				<_Editor>
+					<Category>Entries:Environment:Exterior:Dust</Category>
+				</_Editor>
+				<Streaming_Category>Preload</Streaming_Category>
+				<Singleplayer>False</Singleplayer>
+				<Multiplayer>False</Multiplayer>
+			</Effect>
+			
+			<Effect>
+				<Name>env_dust_blowing_a</Name>
+				<VFX>
+					<Filename>env_dust_blowing_a.effectx</Filename>
+				</VFX>
+				<Radius>5</Radius>
+				<_Editor>
+					<Category>Entries:Environment:Exterior:Dust</Category>
+				</_Editor>
+				<Streaming_Category>Environmental</Streaming_Category>
+				<Singleplayer>False</Singleplayer>
+				<Multiplayer>False</Multiplayer>
+			</Effect>
+			
+			<Effect>
+				<Name>env_dust_blowing_small_a</Name>
+				<VFX>
+					<Filename>env_dust_blowing_small_a.effectx</Filename>
+				</VFX>
+				<Radius>5</Radius>
+				<_Editor>
+					<Category>Entries:Environment:Exterior:Dust</Category>
+				</_Editor>
+				<Streaming_Category>Environmental</Streaming_Category>
+				<Singleplayer>False</Singleplayer>
+				<Multiplayer>False</Multiplayer>
+			</Effect>
+			
+			<Effect>
+				<Name>env_dust_blowing_b</Name>
+				<VFX>
+					<Filename>env_dust_blowing_b.effectx</Filename>
+				</VFX>
+				<Radius>5</Radius>
+				<_Editor>
+					<Category>Entries:Environment:Exterior:Dust</Category>
+				</_Editor>
+				<Streaming_Category>Environmental</Streaming_Category>
+				<Singleplayer>False</Singleplayer>
+				<Multiplayer>False</Multiplayer>
+			</Effect>
+			
+			<Effect>
+				<Name>env_dust_blowing_c</Name>
+				<VFX>
+					<Filename>env_dust_blowing_c.effectx</Filename>
+				</VFX>
+				<Radius>5</Radius>
+				<_Editor>
+					<Category>Entries:Environment:Exterior:Dust</Category>
+				</_Editor>
+				<Streaming_Category>Environmental</Streaming_Category>
+				<Singleplayer>False</Singleplayer>
+				<Multiplayer>False</Multiplayer>
+			</Effect>
+			
+			<Effect>
+				<Name>env_ext_light_corona_a</Name>
+				<VFX>
+					<Filename>env_ext_light_corona_a.effectx</Filename> <!--Default env_ext_light_corona_a.effectx--> <!--Disabling this breaks sunshafts-->
+				</VFX>
+				<Streaming_Category>Environmental</Streaming_Category>
+				<Radius>10.0</Radius> <!--Default 1.0-->
+				<Singleplayer>True</Singleplayer>
+				<Multiplayer>True</Multiplayer>
+				<LOD>
+					<Distance>
+						<Fading_start>40</Fading_start>
+						<Fading_end>50</Fading_end>
+						<Restore>True</Restore>
+					</Distance>
+					<Update>
+						<Minimum_time>0.1</Minimum_time>
+					</Update>
+				</LOD>
+				<_Editor>
+					<Category>Entries:Environment:Exterior:Lights</Category>
+				</_Editor>
+			</Effect>
+			
+			<Effect>
+				<Name>env_sun_corona_a</Name>
+				<VFX>
+					<Filename>null.effectx</Filename> <!--Default "env_sun_corona_a.effectx--> <!--This removes the obnoxious glare but makes sun small-->
+				</VFX>
+				<Streaming_Category>Preload</Streaming_Category>
+				<Singleplayer>True</Singleplayer>
+				<Multiplayer>True</Multiplayer>
+				<_Editor>
+					<Category>Entries:Environment:Exterior</Category>
+				</_Editor>
+			</Effect>
+			
+			<Effect>
+				<Name>null</Name>
+				<VFX>
+					<Filename>null.effectx</Filename>
+				</VFX>
+				<Streaming_Category>Preload</Streaming_Category>
+				<Singleplayer>True</Singleplayer>
+				<Multiplayer>True</Multiplayer>
+				<_Editor>
+					<Category>Entries</Category>
+				</_Editor>
+			</Effect>
+			
+			<Effect>
+				<Name>env_gust_devil_a</Name>
+				<VFX>
+					<Filename>env_gust_devil_a.effectx</Filename>
+				</VFX>
+				<Streaming_Category>Preload</Streaming_Category>
+				<Radius>10</Radius>
+				<Singleplayer>False</Singleplayer>
+				<Multiplayer>False</Multiplayer>
+				<_Editor>
+					<Category>Entries:Environment:Exterior:Dust</Category>
+				</_Editor>
+			</Effect>
+		</Edit>
+	</Changes>
+</Mod>
