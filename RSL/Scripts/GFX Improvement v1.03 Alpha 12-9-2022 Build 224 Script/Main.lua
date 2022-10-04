@@ -57,8 +57,8 @@ local function SetGraphicsSettings()
     rfg.Terrain.FadeEnd = 5781.0                                      --Default 250.0
 	rfg.SetFarClip(5781.0)                    
     rfg.SetHighLodFarClip(5781.0)
-	rfg.Misc.AlphaDistStart = 5781.0 					              --Increases decal draw distance but one of these might cause cars to glow in the distance
-	rfg.Misc.AlphaDistEnd = 5781.0 					                  --Increases decal draw distance
+	--rfg.Misc.AlphaDistStart = 5781.0 					              --Increases decal draw distance but one of these might cause cars to glow in the distance
+	--rfg.Misc.AlphaDistEnd = 5781.0 					                  --Increases decal draw distance
 	rfg.LodInfo.Dist = 5781.0
 	rfg.ObjectRenderDistance = 5781.0
 	
