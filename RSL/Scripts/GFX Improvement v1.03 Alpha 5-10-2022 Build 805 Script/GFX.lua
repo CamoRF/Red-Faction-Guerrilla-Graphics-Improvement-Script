@@ -10,10 +10,10 @@ local function SetGraphicsSettings()
 	rfg.Dof.FocusEndB = 150.0                                         --Default 100.0
 	
 --SHADOWS--
-	rfg.SetShadowResolutions(8192, 9216, 10240, 12288)                --Resolution of shadow cascades from right to left
-	rfg.Shadows.ShadowMapFadePercent = 0.2125                         --Default 0.8
+	rfg.SetShadowResolutions(8192, 9216, 9728, 9728)                  --Resolution of shadow cascades from right to left
+	rfg.Shadows.ShadowMapFadePercent = 0.2                            --Default 0.8
 	rfg.Shadows.DropShadowPercent = 1.0                               --Default 0.4
-	rfg.Shadows.ShadowPercent = 0.7125                                --Default 1.0
+	rfg.Shadows.ShadowPercent = 0.7                                   --Default 1.0
 											
 --CLOUD SHADOWS--
 	rfg.Shadows.CloudShadowScale = 0.5                                --Default 0.5
@@ -40,7 +40,7 @@ local function SetGraphicsSettings()
 	
 --SSAO--
 	rfg.Ssao.Intensity = 8.0						  	              --Default 4.0
-	rfg.Ssao.ImagePlanePixelsPerMeterFactor = 0.64		              --Default 0.32
+	rfg.Ssao.ImagePlanePixelsPerMeterFactor = 0.62		              --Default 0.32
 	rfg.Ssao.Radius = 2.2			                                  --Default 1.2			  	    
 	rfg.Ssao.DepthFadeRange = 7.5					              	  --Default 1.0
 
@@ -53,17 +53,15 @@ local function SetGraphicsSettings()
 	rfg.SunShafts.UseHalfResSource = false				              --Default true
 	
 --LOD--
-	rfg.Terrain.FadeStart = 5781.0 					                  --Default 140.0, Max 11562.0 for anything LOD related.			      
-    rfg.Terrain.FadeEnd = 5781.0                                      --Default 250.0
-	rfg.SetFarClip(5781.0)                    
-    rfg.SetHighLodFarClip(5781.0)
-	--rfg.Misc.AlphaDistStart = 5781.0 					              --Increases decal draw distance but one of these might cause cars to glow in the distance
-	--rfg.Misc.AlphaDistEnd = 5781.0 					                  --Increases decal draw distance
-	rfg.LodInfo.Dist = 5781.0
-	rfg.ObjectRenderDistance = 5781.0
+	rfg.Terrain.FadeStart = 3072 					                  --Default 140.0, Max 11562.0 for anything LOD related.			      
+    rfg.Terrain.FadeEnd = 3072                                        --Default 250.0
+	rfg.SetFarClip(3072)                    
+    rfg.SetHighLodFarClip(3072)
+	rfg.LodInfo.Dist = 3072
+	rfg.ObjectRenderDistance = 3072
 	
 --SHADOW LOD--
-	rfg.Shadows.ShadowMapMaxDist = 120.0                              --Default 100
+	rfg.Shadows.ShadowMapMaxDist = 125.0                              --Default 100
 	rfg.Shadows.TerrainShadowMaxDist = 260.0                          --Default 240.0		
 	
 --MISC
@@ -71,7 +69,7 @@ local function SetGraphicsSettings()
 	rfg.Misc.FxaaEnabled = false 						              --Default true
 	
 --MESSAGE POPUPS--    
-	rfg.AddUiMessage ("GFX Improvement v1.03a 4-10 724 loaded!", 2.0, true, true)
+	rfg.AddUiMessage ("GFX Improvement v1.03a 5-10 805 loaded!", 2.0, true, true)
 	rfg.AddUiMessage ("Disable shadows in settings and turn them back on to high for changes to apply!", 2.0, true, true)	
 end	
 
@@ -86,3 +84,9 @@ end
 rfg.RegisterEvent("Initialized", Initialized, "[Camo graphics tweaks] Init event")
 
 rfg.RegisterEvent("Load", OnLoad, "[Camo graphics tweaks] Save Init event")
+
+
+
+
+
+
