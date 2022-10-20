@@ -10,7 +10,7 @@ local function SetGraphicsSettings()
 	rfg.Dof.FocusEndB = 150.0                                         --Default 100.0
 	
 --SHADOWS--
-	rfg.SetShadowResolutions(8192, 9216, 9728, 9728)                  --Resolution of shadow cascades from right to left
+	rfg.SetShadowResolutions(7168, 8192, 9216, 9216)                  --Resolution of shadow cascades from right to left
 	rfg.Shadows.ShadowMapFadePercent = 0.2                            --Default 0.8
 	rfg.Shadows.DropShadowPercent = 1.0                               --Default 0.4
 	rfg.Shadows.ShadowPercent = 0.7                                   --Default 1.0
@@ -40,25 +40,25 @@ local function SetGraphicsSettings()
 	
 --SSAO--
 	rfg.Ssao.Intensity = 8.0						  	              --Default 4.0
-	rfg.Ssao.ImagePlanePixelsPerMeterFactor = 0.62		              --Default 0.32
+	rfg.Ssao.ImagePlanePixelsPerMeterFactor = 1.0		              --Default 0.32
 	rfg.Ssao.Radius = 2.2			                                  --Default 1.2			  	    
 	rfg.Ssao.DepthFadeRange = 7.5					              	  --Default 1.0
 
 --SUN SHAFTS--
-	rfg.SunShafts.Scale = 30.0             			                  --Default 1.0
-	rfg.SunShafts.Radius = 30.0                                       --Default 5.0
+	rfg.SunShafts.Scale = 32.0             			                  --Default 1.0
+	rfg.SunShafts.Radius = 32.0                                       --Default 5.0
 	rfg.SunShafts.BlurMultiplier = 2.0                                --Default 1.0								  
-	rfg.SunShafts.BaseLum = 1.28                                      --Default 1.0
-	rfg.SunShafts.LumStepScale = 1.28                                 --Default 1.0
+	rfg.SunShafts.BaseLum = 1.30                                      --Default 1.0
+	rfg.SunShafts.LumStepScale = 1.30                                 --Default 1.0
 	rfg.SunShafts.UseHalfResSource = false				              --Default true
 	
 --LOD--
-	rfg.Terrain.FadeStart = 3072 					                  --Default 140.0, Max 11562.0 for anything LOD related.			      
-    rfg.Terrain.FadeEnd = 3072                                        --Default 250.0
-	rfg.SetFarClip(3072)                    
-    rfg.SetHighLodFarClip(3072)
-	rfg.LodInfo.Dist = 3072
-	rfg.ObjectRenderDistance = 3072
+	rfg.Terrain.FadeStart = 2048 					                  --Default 140.0, Max 11562.0 for anything LOD related.			      
+    rfg.Terrain.FadeEnd = 2048                                        --Default 250.0
+	rfg.SetFarClip(2048)                    
+    rfg.SetHighLodFarClip(2048)
+	rfg.LodInfo.Dist = 2048
+	rfg.ObjectRenderDistance = 2048
 	
 --SHADOW LOD--
 	rfg.Shadows.ShadowMapMaxDist = 125.0                              --Default 100
@@ -69,7 +69,7 @@ local function SetGraphicsSettings()
 	rfg.Misc.FxaaEnabled = false 						              --Default true
 	
 --MESSAGE POPUPS--    
-	rfg.AddUiMessage ("GFX Improvement v1.03a 5-10 805 loaded!", 2.0, true, true)
+	rfg.AddUiMessage ("GFX Improvement v1.04 16-10 517 loaded!", 2.0, true, true)
 	rfg.AddUiMessage ("Disable shadows in settings and turn them back on to high for changes to apply!", 2.0, true, true)	
 end	
 
@@ -84,6 +84,7 @@ end
 rfg.RegisterEvent("Initialized", Initialized, "[Camo graphics tweaks] Init event")
 
 rfg.RegisterEvent("Load", OnLoad, "[Camo graphics tweaks] Save Init event")
+
 
 
 
